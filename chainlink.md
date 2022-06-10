@@ -1,6 +1,6 @@
 ## Chainlink : We have used Chainlink 1) Price Feed 2) Chainlink VRF
 
-https://github.com/Trustified-Network/TN-chainlink/blob/master/src/modal/CreateInvoiceModal.js
+https://github.com/Trustified-Network/TN-Harmony/blob/master/src/modal/CreateInvoiceModal.js
 
 ```javascript
 
