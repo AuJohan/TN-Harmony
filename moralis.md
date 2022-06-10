@@ -2,7 +2,7 @@
 
 **Walletconnect with Moralis to enable users to connect with their wallet and access the dashboard**
 
-https://github.com/Trustified-Network/TN-chainlink/blob/master/src/context/Web3Modal.js
+https://github.com/Trustified-Network/TN-Harmony/blob/master/src/context/Web3Modal.js
 
 ```javascript
 
@@ -64,7 +64,7 @@ const { fetch, data, error, isLoading } = useMoralisCloudFunction(
 
 **Moralis Covalent Plugin to showcase different statistics data in our Dashboard.**
 
-https://github.com/Trustified-Network/TN-chainlink/blob/master/src/sections/%40dashboard/app/AppNewUsers.js
+https://github.com/Trustified-Network/TN-Harmony/blob/master/src/sections/%40dashboard/app/AppNewUsers.js
 
 ```javascript
 
