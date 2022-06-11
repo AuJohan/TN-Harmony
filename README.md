@@ -13,6 +13,48 @@ Trustified.network is a smart contract assured Escrow Agreement and Payment plat
 3) Send/Receive crypto payments in a reliable and secure way without paying hefty commissions to third parties.  
  
 
+# Deploy Smart contracts onHarmony 
+ 
+https://github.com/Trustified-Network/TN-Harmony/blob/master/hardhat.config.js
+
+```javascript
+require("dotenv").config({ path: "./.env" });
+require("@nomiclabs/hardhat-ethers");
+require("@nomiclabs/hardhat-etherscan");
+
+const privateKey = process.env.REACT_APP_PRIVATE_KEY;
+const HARMONY_PRIVATE_KEY = process.env.HARMONY_PRIVATE_KEY; 
+
+
+module.exports = {
+  networks: {
+    harmony: {
+      url: `https://api.s0.b.hmny.io`,
+      accounts: [`0x${HARMONY_PRIVATE_KEY}`]
+    },
+  },
+
+  solidity: {
+    version: "0.8.0",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+    },
+  },
+};
+
+
+
+```
+
+# contract Address
+
+**Harmony Address** : 0x4F5ff6B9F76644FC630412409BEBaFC84621539C 
+
+
+
 # Homepage
 ![Screenshot 2022-05-28 at 12 28 50 AM](https://user-images.githubusercontent.com/45895007/170774584-6ddd4ecb-f1e0-4103-b022-e1adb94be905.png)
 
