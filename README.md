@@ -53,6 +53,75 @@ module.exports = {
 
 **Harmony Address** : 0x4F5ff6B9F76644FC630412409BEBaFC84621539C 
 
+## IPFS/Filecoin : We are Using Web3.Storage, to permanently store all the details of user invoices and subscription services.
+
+```javascript
+
+import { Web3Storage } from "web3.storage";
+
+function getAccessToken() { 
+    return process.env.REACT_APP_WEB3_STORAGE_API_KEY;
+}
+
+function makeStorageClient() {
+    return new Web3Storage({ token: getAccessToken() });
+  }
+
+  function makeFileObjects(data) {  
+    const blob = new Blob([JSON.stringify(data)], {
+      type: "application/json",
+    }); 
+
+    const files = [new File([blob], "Invoice_Details.json")];
+    return files;
+  } 
+
+```
+
+
+## Chainlink : We have used Chainlink 1) Price Feed 2) Chainlink VRF
+
+https://github.com/Trustified-Network/TN-Harmony/blob/master/src/modal/CreateInvoiceModal.js
+
+```javascript
+
+ window.ethereum.enable();
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  const signer = provider.getSigner();
+  const priceFeed = new ethers.Contract(
+    chainLinkPriceFeed,
+    chainlinkABI,
+    signer
+  );
+  const randomNumberCon = new ethers.Contract(
+    RandomNumberGeneratorContract,
+    chainlinkVRFABI.abi,
+    signer
+  );
+
+ await randomNumberCon.getRandomNumber(1000);
+        const randNo = await randomNumberCon.getRandom();
+        setLoading(true);
+        const formData = {
+          invoiceNumber: parseInt(randNo._hex, 16),
+          created: values.cdate,
+          dueDate: values.ddate,
+          description: values.description,
+          quantity: values.quantity,
+          price: values.price,
+          token: selectedToken,
+          network: values.network,
+          name: values.name,
+          address: values.address,
+          taxName: values.taxName,
+          taxPercentage: values.taxPercentage,
+          note: values.note,
+        };
+        const files = makeFileObjects(formData);
+        await storage(files, formData);
+
+```
+
 
 
 # Homepage
