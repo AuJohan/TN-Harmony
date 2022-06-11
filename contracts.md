@@ -1,5 +1,5 @@
 
-# Deploy Smart contracts on BSC chain, Polygon mumbai, Avalanche, and Ropsten 
+# Deploy Smart contracts onHarmony 
 
 https://github.com/Trustified-Network/TN-Harmony/blob/master/hardhat.config.js
 
