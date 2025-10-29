@@ -11,7 +11,8 @@ Trustified.network is a smart contract assured Escrow Agreement and Payment plat
 1) List Products, Services, or subscription packages.
 2) Create Escrow agreements with personalized terms as per customers.
 3) Send/Receive crypto payments in a reliable and secure way without paying hefty commissions to third parties.  
- 
+ ddd
+
 
 # Deploy Smart contracts onHarmony 
  
